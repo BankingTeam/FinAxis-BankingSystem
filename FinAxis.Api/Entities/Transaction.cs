@@ -8,6 +8,6 @@ public class Transaction
     public int ToId { get; set; }
     public double Amount { get; set; }
     public Currency Currency { get; set; }
-    public TransactionStatus TransactionStatus { get; set; }
-    public DateTime AppliedAt { get; set; } = DateTime.UtcNow;
+    public TransactionStatus TransactionStatus { get; } = TransactionStatus.Pending;
+    public DateTime AppliedAt { get; } = DateTime.UtcNow;
 }

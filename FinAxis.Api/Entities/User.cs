@@ -1,12 +1,9 @@
 ﻿using FinAxis.Api.Dtos;
 
-namespace FinAxis.Api.Entities
+namespace FinAxis.Api.Entities;
+
+public class User : UserSignUpDTO
 {
-    public class User
-    {
-        public int ID { get; set; }
-        public UserSignUpDTO Data { get; set; } = new UserSignUpDTO();
-
-
-    }
+    public int Id { get; set; }
+    public DateOnly AccountCreatedAt { get; set; } =  DateOnly.FromDateTime(DateTime.Today);
 }
